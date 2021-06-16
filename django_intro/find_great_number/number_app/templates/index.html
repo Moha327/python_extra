@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Welcome to the great number game</h2>
+    <p>I am thinking of a number between 1 and 100 <br> Take a guess!</p>
+    {% if request.session.numb != 0 %}
+    {% if request.session.x != "right" %}
+        <p>{{ request.session.x }}</p>
+    {% else %}
+        <p> {{ request.session.numb }} was the right number</p>
+        <form action="/s" method="POST">
+        {% csrf_token %}
+        <button>Play again</button>
+        </form>
+    {% endif %}
+    {% endif %}
+    <form action="/" method="POST">
+        {% csrf_token %}
+        {% if request.session.x != "right" %}
+        <input type="number" name="num" min="1" max="100">
+        <input type="submit" value="Submit">
+        {% endif %}
+    </form>
+
+</body>
+</html>

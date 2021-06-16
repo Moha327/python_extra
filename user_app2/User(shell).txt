@@ -1,0 +1,173 @@
+Microsoft Windows [Version 10.0.19042.985]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\academy\Desktop\pythonstack>pip list
+Package      Version
+------------ -------
+click        7.1.2
+Flask        1.1.2
+itsdangerous 1.1.0
+Jinja2       2.11.3
+MarkupSafe   1.1.1
+Werkzeug     1.0.1
+
+C:\Users\academy\Desktop\pythonstack>django-admin startproject user_app
+'django-admin' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\academy\Desktop\pythonstack>cd my_environments
+
+C:\Users\academy\Desktop\pythonstack\my_environments>call djangoPy3Env\Scripts\activate
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\my_environments>cd ..
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack>cd django
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django>cd ..
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack>pip list
+Package    Version
+---------- -------
+Django     2.2.4
+pip        21.1.1
+pytz       2021.1
+setuptools 56.0.0
+sqlparse   0.4.1
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack>cd django
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django>django-admin startproject user_app
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django>cd user_app
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\user_app>code .
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\user_app>python manage.py start my_user_app
+Unknown command: 'start'. Did you mean startapp?
+Type 'manage.py help' for usage.
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\user_app>python manage.py startapp my_user_app
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\user_app>python manage.py makemigration
+Unknown command: 'makemigration'. Did you mean makemigrations?
+Type 'manage.py help' for usage.
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\user_app>python manage.py makemigrations
+Migrations for 'my_user_app':
+  my_user_app\migrations\0001_initial.py
+    - Create model User
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\user_app>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, my_user_app, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying my_user_app.0001_initial... OK
+  Applying sessions.0001_initial... OK
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\user_app>python manage.py shell
+Python 3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from USER_APP.models import User
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'USER_APP'
+>>> from user_app.models import User
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ModuleNotFoundError: No module named 'user_app.models'
+>>> from my_user_app.models import User
+>>> User.objects.all()
+<QuerySet []>
+>>> User.objects.create(first_name = "Mohammed", last_name = "Hammouz", email_address = "mohammed@yahoo.com", age = 26,created_at = "1995-9-5", updated_at = "2020-9-5")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 420, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\base.py", line 501, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: User() got an unexpected keyword argument 'first_name'
+>>> User.objects.create(first_name = "Mohammed", last_name = "Hammouz", email_address = "mohammed@yahoo.com", age = 26,created_at = "1995-9-5", updated_at = "2020-9-5")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 420, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\base.py", line 501, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: User() got an unexpected keyword argument 'first_name'
+>>> User.objects.create(firstname = "Mohammed", lastname = "Hammouz", email_address = "mohammed@yahoo.com", age = 26,created_at = "1995-9-5", updated_at = "2020-9-5")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 420, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\base.py", line 501, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: User() got an unexpected keyword argument 'email_address'
+>>> User.objects.create(firstname = "Mohammed", lastname = "Hammouz", email = "mohammed@yahoo.com", age = 26,created_at = "1995-9-5", updated_at = "2020-9-5")
+<User: User object (1)>
+>>> User.objects.all().ferst()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'QuerySet' object has no attribute 'ferst'
+>>> User.objects.all().first()
+<User: User object (1)>
+>>> User.objects.create(firstname = "Mohammed", lastname = "Hammouz", email = "mohammed@yahoo.com", age = 26,created_at = "1995-9-5", updated_at = "2020-9-5")
+<User: User object (2)>
+>>> User.objects.create(firstname = "Ali", lastname = "Hammouz", email = "ali@yahoo.com", age = 37,created_at = "1984-1-5", updated_at = "2020-1-5")
+<User: User object (3)>
+>>> User.objects.create(firstname = "Abeer", lastname = "Hammouz", email = "abeer@yahoo.com", age = 32,created_at = "1989-5-12", updated_at = "2021-5-12")
+<User: User object (4)>
+>>> from my_user_app.models import *
+>>> python manage.py shell
+  File "<console>", line 1
+    python manage.py shell
+           ^
+SyntaxError: invalid syntax
+>>> python manage.py shell
+  File "<console>", line 1
+    python manage.py shell
+           ^
+SyntaxError: invalid syntax
+>>> User.objects.create(firstname = "Rasha", lastname = "Hammouz", email = "rasha@yahoo.com", age = 38,created_at = "1983-11-15", updated_at = "2021-11-15")
+<User: User object (5)>
+>>> User.objects.create(firstname = "Ola", lastname = "Hammouz", email = "ola@yahoo.com", age = 34,created_at = "1986-9-8", updated_at = "2021-9-8")
+<User: User object (6)>
+>>> User.objects.create(firstname = "Afaf", lastname = "Hammouz", email = "afaf@yahoo.com", age = 63,created_at = "1957-10-31", updated_at = "2020-10-31")
+<User: User object (7)>
+>>> User.objects.all()
+<QuerySet [<User: User object (1)>, <User: User object (2)>, <User: User object (3)>, <User: User object (4)>, <User: User object (5)>, <User: User object (6)>, <User: User object (7)>]>
+>>> User.objects.first()
+<User: User object (1)>
+>>> User.objects.last()
+<User: User object (7)>
+>>> c = User.objects.get(id=1)
+>>> c.firstname = "mahmoud"
+>>> c.save()
+>>> c = User.objects.get(id=2)
+>>> c.delete
+<bound method Model.delete of <User: User object (2)>>
+>>> User.objects.all().order_by("firstname")
+<QuerySet [<User: User object (4)>, <User: User object (7)>, <User: User object (3)>, <User: User object (2)>, <User: User object (6)>, <User: User object (5)>, <User: User object (1)>]>
+>>>

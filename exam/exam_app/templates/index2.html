@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hi {{all_users.first_name}} {{all_users.lastname}}</h1>    <a href="/logout">logout</a>
+    {% csrf_token %}
+      <form action="books" method="POST">
+
+        {% for user in all_users %}
+        {{all_user.first_name}} says: <input type="text" name="textbox">
+        <a href="thoughts/{{all_user.id}}">Details</a>
+        {% endfor %}
+
+        <input type="submit" style="background-color: red;" name="Delete">
+         {% endfor %}
+      </form>
+</body>
+</html>

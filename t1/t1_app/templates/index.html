@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="/base" method = "POST">
+        {% csrf_token %}
+        Your Name <input type="text" name = 'Your Name'><br><br>
+        Dojo Location <select name='Dojo Location'>
+                           <option value="Nablus">Nablus</option>
+                           <option value="Ramallah">Ramallah</option>
+                           <option value="Hebron">Hebron</option>
+                      </select><br><br> 
+        Favorite Language <select name='Favorite Language'>
+                               <option value="Python">Python</option>
+                               <option value="Java">Java</option>
+                               <option value="Mern">Mern</option>
+                          </select><br><br>
+        Comment (optional) <br><br>
+         <textarea name='Comment'></textarea><br><br>
+         <input type="submit" value="button">
+    </form>
+</body>
+</html>

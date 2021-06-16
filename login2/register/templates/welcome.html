@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1>Welcome {{request.session.first_name}} {{request.session.last_name}}!</h1>
+    <a id="logout_url" href="/logout">logout</a>
+    <!-- {% for Car in cars%}
+    <li>{{request.session.name}}{{request.session.model}}</li>
+    {% endfor %} -->
+    </div>
+    <hr>
+    <div class="clear_files"></div>
+    <h1>Add a Favorite Book</h1>
+    <form action="/add_book" method="POST">
+        <input type="text" name="title" placeholder="Book Title">
+        <input type="text" name="description" placeholder="Description">
+        <input type="submit" value>
+    </form>
+</body>
+</html>

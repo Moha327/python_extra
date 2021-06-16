@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .Farm{
+        display: inline-block;
+        border: 2px solid black;
+        width: 200px;
+        height: 200px;
+        padding-left: 20px;
+    }
+    .Cave{
+        display: inline-block;
+        border: 2px solid black;
+        width: 200px;
+        height: 200px;
+        padding-left: 20px;
+    }
+    .House{
+        display: inline-block;
+        border: 2px solid black;
+        width: 200px;
+        height: 200px;
+        padding-left: 20px;
+    }
+    .Casino{
+        display: inline-block;
+        border: 2px solid black;
+        width: 200px;
+        height: 200px;
+        padding-left: 20px;
+    }
+    .cont{
+        display: flex;
+        justify-content: space-around;
+    }
+</style>
+</head>
+<body>
+
+<h3>Your Gold: {{request.session.gold}}</h3>
+<div class="cont">
+<div class="Farm">
+    <h1>Farm</h1>
+    <h3>(earns 10-20 gold)</h3>
+    <form action="/process_money" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="Farm"  value="Farm">
+        <input type="submit" value="find gold">
+    </form>
+</div>
+<div class="Cave">
+    <h1>Cave</h1>
+    <h3>(earns 5-10 gold)</h3>
+    <form action="/process_money" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="Farm" value="Cave">
+        <input type="submit" value="find gold">
+    </form>
+</div>
+<div class="House">
+    <h1>House</h1>
+    <h3>(earns 2-5 gold)</h3>
+    <form action="/process_money" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="Farm"  value="House">
+        <input type="submit" value="find gold">
+    </form>
+</div>
+<div class="Casino">
+    <h1>Casino</h1>
+    <h3>(earns/takes -50-50 gold)</h3>
+    <form action="/process_money" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="Farm"  value="Casino">
+        <input type="submit" value="find gold">
+    </form>
+</div>
+</div>
+<form>
+    {% csrf_token %}
+    Activities: <br>
+    <textarea name="area" cols="100" rows="10">{{request.session.area}}</textarea>
+</form>
+
+</body>
+</html>           

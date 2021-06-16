@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{%block content%}
+    {% if messages %}
+<ul class="messages">    
+    {% for message in messages %}    
+        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+    {% endfor %}
+</ul>
+{% endif %}
+    <conterner>
+    <div>
+    <h1>Registration</h1>
+    <form action="create" method="POST">
+        {% csrf_token %}
+    First Name : <input type="text" name="firstname" id="firstname"><br><br>
+    Last Name : <input type="text" name="lastname" id="lastname"><br><br>
+    Email: <input type="email" name="email" id="email"><br><br>
+    Password : <input type="password" name="passwd" id="passwd"><br><br>
+    Confirm PW : <input type="password" name="confirmpw" id="confirmpw"><br><br>
+    Birth Date : <input type="date" name="birth_date" id="birth_date">
+    <input type="submit" value="Register">
+    </form>
+    </div>
+    <div>
+        <form action="login" method="POST">
+            {% csrf_token %}
+            <h1>Login</h1>
+            Email : <input type="email" name="loginemail" id="loginemail">
+            Password : <input type="password" name="loginpass" id="loginpass">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    </conterner>
+    {%endblock%}

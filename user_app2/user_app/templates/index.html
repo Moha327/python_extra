@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+           <th>ID</th>
+           <th>FirstName</th>
+           <th>LastName</th>
+           <th>Email</th>
+           <th>Age</th>
+        </tr>
+        {%for users in user_app%}
+        <tr>
+           <td>{{users.id}}</td>
+           <td>{{users.firstname}</td>
+           <td>{{users.lastname}</td>
+           <td>{{users.email}</td>
+           <td>{{users.age}</td>
+        {%endfor%}
+        </tr>
+        <form action="/s" method="POST">
+            {% csrf_token %}
+            <button>Play again</button>
+            </form>
+        {% endif %}
+        {% endif %}
+        </table>
+        <p>______________________________________________________</p>
+        <h1>Add a User</h1>
+        <form action="/add" method="POST">
+            firstname <input type="text" , name="firstname">
+            lastname <input type="text" , name="lastname">
+            email <input type="text" , name="email">
+            age <input type="text" , name="age">
+            <input type="submit" value="add">
+    </form>
+</body>
+</html>

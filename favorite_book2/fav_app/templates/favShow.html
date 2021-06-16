@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{%block content%}
+<div>
+    <h1 style="border: 1px solid; width: 300px;text-align: center;margin-top: 10px;">{{Booktitle}}</h1>
+</div>
+<small style="margin-left: 10px;margin: auto 0px ">uploded by {{BookAuthor.first_name }} {{BookAuthor.last_name  }}</small><br>
+<form action="/updatedes/{{bookid}}" method="POST">
+    {% csrf_token %}
+<small>description : <input type="text" name="updatetext" id="update" value="{{desc}}"class="form-control"></small><br>
+{% if uploaded_by.first_name == user.fname %}
+<input type="submit" value="Update" class="btn btn-info" style="margin-top: 10px;margin-left: 500px;">
+</form>
+<form action="/deletedes" method="POST">
+    {% csrf_token %} 
+<input type="submit" value="Delete" class="btn btn-danger" style="margin-top: 10px;margin-left: 500px;">
+</form>
+{%endif%}
+<div>
+    <h1>Users Who like this Book :</h1>
+    <ul>
+        
+        {%for users in userswholike%}
+        <li>{{users.first_name}}</li>
+        {%endfor%}
+        
+    </ul>
+</div>
+{%if not userswholike%}
+<a href="/addFavarit/{{bookid}}">Add to Favoraite</a>
+{%endif%}
+{%if userswholike %}
+<a href="/unfavarit/{{bookid}}">unFavarit</a>
+{%endif%}
+{%endblock%}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h2>Submitted Info</h2>
+    <p>username: {{request.session.name}}</p>
+    <p>Location: {{request.session.Location}}</p>
+    <p>Language: {{request.session.language}}</p>
+    <p>area: {{request.session.area}}</p>
+    <form action="/">
+        <input type="submit" value="Go back">
+    </form>
+</body>
+</html>

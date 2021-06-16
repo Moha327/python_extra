@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{%block content%}
+<h2>Welcome,{{user.fname}}</h2>
+<hr>
+<h3>Add a Favorite Book</h3>
+<form action="addBook/{{user.userid}}" method="POST">
+Title : <input type="text" name="titletext" id="titletext" class="form-control"><br><br>
+Description : <textarea name="desc" id="desc" cols="60" rows="2" class="form-control"></textarea>
+    {% csrf_token %}
+<input type="submit" value="Add" class="btn btn-info" style="margin-top: 10px;margin-left: 500px;">
+</form>
+
+<div>
+    <h3>All Books</h3>
+    {% for book in books%}
+    <p><a href="/showbook/{{book.id}}">{{book.title}}</a></p>
+    <hr>
+    <small>(Added by {{book.uploaded_by.first_name}})</small><br>
+    {%if book.users_who_like.first.first_name == user.fname%}
+    <small>this one of your faveret</small>
+    {%endif%}
+    {%if  book.users_who_like.first.first_name != user.fname%}
+    <small>this is not of your faveret</small>
+    {%endif%}
+    <form action="deleteBook/{{book.id}}" method="POST">
+        {% csrf_token %}
+    <input type="submit" value="Delete">
+</form>
+    {%endfor%}
+</div>
+{%endblock%}

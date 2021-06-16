@@ -1,0 +1,298 @@
+Microsoft Windows [Version 10.0.19042.985]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\academy\Desktop\pythonstack>cd my_environments
+
+C:\Users\academy\Desktop\pythonstack\my_environments>call djangoPy3Env\Scripts\activate
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\my_environments>cd ..
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack>cd django
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 12FA-992F
+
+ Directory of C:\Users\academy\Desktop\pythonstack\django
+
+05/19/2021  09:02 PM    <DIR>          .
+05/19/2021  09:02 PM    <DIR>          ..
+05/06/2021  11:13 AM    <DIR>          diango_fullstack
+05/06/2021  11:12 AM    <DIR>          diango_fundamentals
+05/06/2021  11:13 AM    <DIR>          diango_orm
+05/19/2021  08:52 PM    <DIR>          django_intro
+05/17/2021  05:47 PM    <DIR>          first_project
+05/19/2021  09:08 PM    <DIR>          my_first_orm
+               0 File(s)              0 bytes
+               8 Dir(s)  448,556,728,320 bytes free
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django>cd diango_orm
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\diango_orm>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 12FA-992F
+
+ Directory of C:\Users\academy\Desktop\pythonstack\django\diango_orm
+
+05/06/2021  11:13 AM    <DIR>          .
+05/06/2021  11:13 AM    <DIR>          ..
+               0 File(s)              0 bytes
+               2 Dir(s)  448,556,728,320 bytes free
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\diango_orm>code .
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\diango_orm>cd ..
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 12FA-992F
+
+ Directory of C:\Users\academy\Desktop\pythonstack\django
+
+05/19/2021  09:02 PM    <DIR>          .
+05/19/2021  09:02 PM    <DIR>          ..
+05/06/2021  11:13 AM    <DIR>          diango_fullstack
+05/06/2021  11:12 AM    <DIR>          diango_fundamentals
+05/06/2021  11:13 AM    <DIR>          diango_orm
+05/19/2021  08:52 PM    <DIR>          django_intro
+05/17/2021  05:47 PM    <DIR>          first_project
+05/19/2021  09:08 PM    <DIR>          my_first_orm
+               0 File(s)              0 bytes
+               8 Dir(s)  448,555,257,856 bytes free
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django>cd my_first_orm
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\my_first_orm>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 12FA-992F
+
+ Directory of C:\Users\academy\Desktop\pythonstack\django\my_first_orm
+
+05/19/2021  09:08 PM    <DIR>          .
+05/19/2021  09:08 PM    <DIR>          ..
+05/19/2021  09:02 PM               653 manage.py
+05/19/2021  09:08 PM    <DIR>          movie_app
+05/19/2021  09:07 PM    <DIR>          my_first_orm
+               1 File(s)            653 bytes
+               4 Dir(s)  448,555,257,856 bytes free
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\my_first_orm>code .
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\my_first_orm>python manage.py makemigrations
+Migrations for 'movie_app':
+  movie_app\migrations\0001_initial.py
+    - Create model Movie
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\my_first_orm>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, movie_app, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying movie_app.0001_initial... OK
+  Applying sessions.0001_initial... OK
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\my_first_orm>cd ..
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django>cd my_first_orm
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\my_first_orm>code .
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\my_first_orm>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, movie_app, sessions
+Running migrations:
+  No migrations to apply.
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\my_first_orm>python manage.py shell
+Python 3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from movie_app.model
+  File "<console>", line 1
+    from movie_app.model
+                        ^
+SyntaxError: invalid syntax
+>>> from movie_app.models import Movie
+>>> Movie.objects.all()
+<QuerySet []>
+>>> Movie.objects.create(title = "a a a a a", description = "b b b b b" , release_date = "1995-9-5" , duration = 120)
+C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\fields\__init__.py:1418: RuntimeWarning: DateTimeField Movie.release_date received a naive datetime (1995-09-05 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+<Movie: Movie object (1)>
+>>> Movie.objects.all().first()
+<Movie: Movie object (1)>
+>>> Movie.objects.first()
+<Movie: Movie object (1)>
+>>> Movie.objects.first().__dict__
+{'_state': <django.db.models.base.ModelState object at 0x000002168E938040>, 'id': 1, 'title': 'a a a a a', 'description': 'b b b b b', 'release_date': datetime.datetime(1995, 9, 5, 0, 0, tzinfo=<UTC>), 'duration': 120, 'created_at': datetime.datetime(2021, 5, 20, 10, 22, 12, 574938, tzinfo=<UTC>), 'updated_at': datetime.datetime(2021, 5, 20, 10, 22, 12, 574938, tzinfo=<UTC>)}
+>>> Movie.objects.first().__dict__
+{'_state': <django.db.models.base.ModelState object at 0x000002168E938070>, 'id': 1, 'title': 'a a a a a', 'description': 'b b b b b', 'release_date': datetime.datetime(1995, 9, 5, 0, 0, tzinfo=<UTC>), 'duration': 120, 'created_at': datetime.datetime(2021, 5, 20, 10, 22, 12, 574938, tzinfo=<UTC>), 'updated_at': datetime.datetime(2021, 5, 20, 10, 22, 12, 574938, tzinfo=<UTC>)}
+>>> Movie.objects.first()
+<Movie: Movie object (1)>
+>>> exit()
+
+(djangoPy3Env) C:\Users\academy\Desktop\pythonstack\django\my_first_orm>python manage.py shell
+Python 3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from movie_app.models import Movie
+>>> Movie.objects.first()
+<Movie: Movie object (1)>
+>>>
+KeyboardInterrupt
+>>>  from movie_app.models import Movie
+  File "<console>", line 1
+    from movie_app.models import Movie
+IndentationError: unexpected indent
+>>> from movie_app.model
+  File "<console>", line 1
+    from movie_app.model
+                        ^
+SyntaxError: invalid syntax
+>>> from movie_app.models
+  File "<console>", line 1
+    from movie_app.models
+                         ^
+SyntaxError: invalid syntax
+>>> Movie.objects.create(title = "c c c c c", description = "d d d d d" , release_date = "1995-9-5" , duration = 120)
+C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\fields\__init__.py:1418: RuntimeWarning: DateTimeField Movie.release_date received a naive datetime (1995-09-05 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+<Movie: Movie object (2)>
+>>> Movie.objects.second()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Manager' object has no attribute 'second'
+>>>  Movie.objects.all().second()
+  File "<console>", line 1
+    Movie.objects.all().second()
+IndentationError: unexpected indent
+>>>  Movie.objects.second()
+  File "<console>", line 1
+    Movie.objects.second()
+IndentationError: unexpected indent
+>>> from movie_app.models import Movie
+>>>  Movie.objects.second().__dicit__
+  File "<console>", line 1
+    Movie.objects.second().__dicit__
+IndentationError: unexpected indent
+>>>  Movie.objects.all().first()
+  File "<console>", line 1
+    Movie.objects.all().first()
+IndentationError: unexpected indent
+>>>  Movie.objects.create(title = "e e e e e", description = "f f f f f" , release_date = "1995-9-5" , duration = 120)
+  File "<console>", line 1
+    Movie.objects.create(title = "e e e e e", description = "f f f f f" , release_date = "1995-9-5" , duration = 120)
+IndentationError: unexpected indent
+>>>  Movie.objects.all().first()
+  File "<console>", line 1
+    Movie.objects.all().first()
+IndentationError: unexpected indent
+>>> from movie_app.models import Movie
+>>> Movie.objects.all()
+<QuerySet [<Movie: Movie object (1)>, <Movie: Movie object (2)>]>
+>>> Movie.objects.create(title = "e e e e e", description = "f f f f f" , release_date = "1995-9-5" , duration = 120)
+C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\fields\__init__.py:1418: RuntimeWarning: DateTimeField Movie.release_date received a naive datetime (1995-09-05 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+<Movie: Movie object (3)>
+>>> print(Movie.objects.all())
+<QuerySet [<Movie: Movie object (1)>, <Movie: Movie object (2)>, <Movie: Movie object (3)>]>
+>>>  Movie.objects.create(title = "g g g g g", description = "h h h h h" , release_date = "1995-9-5" , duration = 120)
+  File "<console>", line 1
+    Movie.objects.create(title = "g g g g g", description = "h h h h h" , release_date = "1995-9-5" , duration = 120)
+IndentationError: unexpected indent
+>>> Movie.objects.all()
+<QuerySet [<Movie: Movie object (1)>, <Movie: Movie object (2)>, <Movie: Movie object (3)>]>
+>>>  Movie.objects.create(title = "e e e e e", description = "f f f f f" , release_date = "1995-9-5" , duration = 120)
+  File "<console>", line 1
+    Movie.objects.create(title = "e e e e e", description = "f f f f f" , release_date = "1995-9-5" , duration = 120)
+IndentationError: unexpected indent
+>>> Movie.objects.create(title = "e e e e e", description = "f f f f f" , release_date = "1995-9-5" , duration = 120)
+C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\fields\__init__.py:1418: RuntimeWarning: DateTimeField Movie.release_date received a naive datetime (1995-09-05 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+<Movie: Movie object (4)>
+>>>  print(Movie.objects.all())
+  File "<console>", line 1
+    print(Movie.objects.all())
+IndentationError: unexpected indent
+>>> print(Movie.objects.all())
+<QuerySet [<Movie: Movie object (1)>, <Movie: Movie object (2)>, <Movie: Movie object (3)>, <Movie: Movie object (4)>]>
+>>> Movie.objects.create(title = "g g g g g ", description = "h h h h h" , release_date = "1995-9-5" , duration = 120)
+C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\fields\__init__.py:1418: RuntimeWarning: DateTimeField Movie.release_date received a naive datetime (1995-09-05 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+<Movie: Movie object (5)>
+>>> print(Movie.objects.all())
+<QuerySet [<Movie: Movie object (1)>, <Movie: Movie object (2)>, <Movie: Movie object (3)>, <Movie: Movie object (4)>, <Movie: Movie object (5)>]>
+>>> Movie.objects.create(title = "i i i i i", description = "j j j j j" , release_date = "1995-9-5" , duration = 120)
+C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\fields\__init__.py:1418: RuntimeWarning: DateTimeField Movie.release_date received a naive datetime (1995-09-05 00:00:00) while time zone support is active.
+  warnings.warn("DateTimeField %s received a naive datetime (%s)"
+<Movie: Movie object (6)>
+>>> print(Movie.objects.all())
+<QuerySet [<Movie: Movie object (1)>, <Movie: Movie object (2)>, <Movie: Movie object (3)>, <Movie: Movie object (4)>, <Movie: Movie object (5)>, <Movie: Movie object (6)>]>
+>>> Movie.objects.all().values
+<bound method QuerySet.values of <QuerySet [<Movie: Movie object (1)>, <Movie: Movie object (2)>, <Movie: Movie object (3)>, <Movie: Movie object (4)>, <Movie: Movie object (5)>, <Movie: Movie object (6)>]>>
+>>> ClassName.objects.last()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'ClassName' is not defined
+>>> Movie.objects.last()
+<Movie: Movie object (6)>
+>>> Movie.objects.first()
+<Movie: Movie object (1)>
+>>> c = Movie.objects.get(id31)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'id31' is not defined
+>>> c = Movie.objects.get(id = 3)
+>>> c.title = "Mohammed"
+>>> c.save()
+>>> c = Movie.objects.get(id=1)
+>>> c.delete()
+(1, {'movie_app.Movie': 1})
+>>> Movie.objects.all().order_by("field_name")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 250, in __repr__
+    data = list(self[:REPR_OUTPUT_SIZE + 1])
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 256, in __len__
+    self._fetch_all()
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\sql\compiler.py", line 1087, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\sql\compiler.py", line 474, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\sql\compiler.py", line 55, in pre_sql_setup
+    order_by = self.get_order_by()
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\sql\compiler.py", line 329, in get_order_by
+    order_by.extend(self.find_ordering_name(
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\sql\compiler.py", line 704, in find_ordering_name
+    field, targets, alias, joins, path, opts, transform_function = self._setup_joins(pieces, opts, alias)
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\sql\compiler.py", line 734, in _setup_joins
+    field, targets, opts, joins, path, transform_function = self.query.setup_joins(pieces, opts, alias)
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\sql\query.py", line 1503, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "C:\Users\academy\Desktop\pythonstack\my_environments\djangoPy3Env\lib\site-packages\django\db\models\sql\query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'field_name' into field. Choices are: created_at, description, duration, id, release_date, title, updated_at
+>>> Movie.objects.all().order_by("title")
+<QuerySet [<Movie: Movie object (3)>, <Movie: Movie object (2)>, <Movie: Movie object (4)>, <Movie: Movie object (5)>, <Movie: Movie object (6)>]>
+>>> Movie.objects.all().order_by("-title")
+<QuerySet [<Movie: Movie object (6)>, <Movie: Movie object (5)>, <Movie: Movie object (4)>, <Movie: Movie object (2)>, <Movie: Movie object (3)>]>
+>>>

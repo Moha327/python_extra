@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=tab, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Movies</h1>
+    <ul>
+    <table>
+    <tr>
+       <th>ID</th>
+       <th>FirstName</th>
+       <th>LastName</th>
+       <th>Email</th>
+       <th>Age</th>
+    </tr>
+    {%for users in all_the_movies%}
+    <tr>
+       <td>{{users.id}}</td>
+       <td>{{users.firstname}</td>
+       <td>{{users.lastname}</td>
+       <td>{{users.email}</td>
+       <td>{{users.age}</td>
+    {%endfor%}
+    </tr>
+   
+    </table>
+    
+    </ul>
+</body>
+</html>

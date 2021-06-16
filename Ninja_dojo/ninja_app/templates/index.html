@@ -1,0 +1,93 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="/adddojo" method = "POST">
+    <div class="a">
+        <h1>Add a Dojo</h1>
+        {% csrf_token %}
+        {%}
+         Name: 
+         <input type="text" name = 'Name'> 
+         City: 
+         <input type="text" name = 'City'> 
+         State: 
+         <input type="text" name = 'State'>
+         <input type="submit" name = 'Add'> 
+     </form>
+     <form action="/add_ninja" method = "POST">
+        {% csrf_token %}
+        First Name: 
+        <input type="text" name = 'First_Name'> 
+        Last Name: 
+        <input type="text" name = 'Last_Name'> 
+        Dojo: 
+        <select name="Dojo_school" id="">
+            {% for i in dojos %}
+            <option value="{{i.name}}">{{i.name}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" name = 'Add'> 
+    </form>
+
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+          <h1>Add a dojo</h1>
+    <form action="/ab" method = "POST">
+        {%csrf_token%}
+        <label for="name">Name</label>
+          <input type="text" id="name" name="name"><br>
+          <label for="city">City</label>
+          <input type="text" id="city" name="city"><br>
+          <label for="state">State</label>
+          <input type="text" id="state" name="state"><br>
+          <input type="submit" name="Add">
+    </form>
+
+    {% for i in moh %}
+    <p>{{i.name}}</p>
+    <p>{{i.city}}</p>
+    <p>{{i.state}}</p>
+    {% endfor %}
+   
+
+    <form action="/cd" method="POST" style="margin-left: 1000px; margin-top: -1200px;">
+        {%csrf_token%}
+        <h1>Add a Ninja</h1>
+        <label for="firstname">First Name</label>
+          <input type="text" id="firstname" name="fname"><br>
+          <label for="lastname">Last Name</label>
+          <input type="text" id="lastname" name="lname"><br>
+          <select name="sel">
+              {% for e in moh %}
+              <option value={{e.id}}>{{e.name}}</option>
+              {% endfor %}
+
+          </select>
+          <input type="submit" name="Add">
+    </form>
+    {%for j in hamm%}
+      <p>{{j.first_name}}</p>
+      <p>{{j.last_name}}</p>
+    {% endfor %}
+
+</body>
+</html>

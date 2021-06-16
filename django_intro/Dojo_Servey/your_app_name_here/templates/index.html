@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>  
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">    
+</head>
+<body>
+    <form action="/show" method="POST">
+        {% csrf_token %}
+        Yo4ur Name: <input type="text" name="username"><br><br>
+        Dojo Location: <select name="Location">
+                            <option value="Jenin">Jenin</option>
+                            <option value="Nablus">Nablus</option>
+                            <option value="Ramallah">Ramallah</option>
+                        </select><br><br>
+        Favourite Language: <select name="Language">
+                                <option value="Arabic">Arabic</option>
+                                <option value="English">English</option>
+                                <option value="French">French</option>
+                            </select><br><br>
+        Comment (optional) <textarea name="area"></textarea>
+        <input type="submit" value="Button">
+    </form>
+</body>
+</html>
